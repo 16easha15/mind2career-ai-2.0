@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from google.api_core.exceptions import ResourceExhausted
 import json
+import os
 from db import get_db
 from gemini_ai import model
 from reportlab.pdfgen import canvas
@@ -461,4 +462,5 @@ def chatbot():
     return jsonify({"reply": response.text})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
