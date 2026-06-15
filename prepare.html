@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prepare Yourself</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
+}
+.container{
+    padding:40px;
+    text-align:center;
+}
+h1{
+    color:#38bdf8;
+}
+
+.subtitle{
+    color:#cbd5e1;
+    margin-bottom:40px;
+}
+
+.quiz-cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.quiz-card{
+
+    width:280px;
+
+    background:#1e293b;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.quiz-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0px 0px 20px #38bdf8;
+}
+
+.quiz-card h2{
+    color:#38bdf8;
+}
+
+.quiz-card p{
+    color:#cbd5e1;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<button onclick="goBack()"> Back </button>
+
+<script>
+function goBack(){
+    window.location = "dashboard.html";
+}
+</script>
+<div class="container">
+    
+
+    <h1>
+        Prepare Yourself by Practising and Testing your Knowledge
+    </h1>
+
+    <h3 class="subtitle">
+        Let's Pre-Prepare and Pre-Test
+    </h3>
+
+    <div class="quiz-cards">
+
+        <div class="quiz-card"
+             onclick="startQuiz('interview')">
+
+            <h2>Interview Quiz</h2>
+
+            <p>
+                Practice interview questions
+                based on your career role.
+            </p>
+
+        </div>
+
+    
+
+        <div class="quiz-card"
+             onclick="startQuiz('aptitude')">
+
+            <h2>Aptitude Quiz</h2>
+
+            <p>
+                Test reasoning,
+                quantitative and aptitude skills.
+            </p>
+
+        </div>
+
+        <div class="quiz-card"
+             onclick="startQuiz('technical')">
+
+            <h2>Technical Quiz</h2>
+
+            <p>
+                Role-specific technical questions.
+            </p>
+
+        </div>
+
+    </div>
+    
+    
+
+</div>
+
+<script>
+
+function startQuiz(type){
+
+    let role =
+    localStorage.getItem("careerRole") ||
+    "Software Engineer";
+
+    localStorage.setItem("quizType", type);
+    localStorage.setItem("careerRole", role);
+
+    window.location.href = "quiz.html";
+}
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Mind2Career AI 2.0 Login</title>
+    
+    <style>
+body{
+    background:#0f172a;
+    font-family:Arial;
+    display:flex;
+    flex-direction:column;   /* ADD */
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    color:white;
+}
+
+/* CARD FIXED */
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:12px;
+    width:320px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;   /* ✅ centers everything */
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* HEADING CENTER */
+h2{
+    text-align:center;
+    width:100%;
+    margin-bottom:15px;
+}
+
+/* INPUT FIX */
+input{
+    width:100%;          /* ✅ FIXED ALIGNMENT */
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:6px;
+    outline:none;
+    box-sizing:border-box;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:10px;
+    background:#38bdf8;
+    border:none;
+    cursor:pointer;
+    margin-top:10px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+a{
+    color:#38bdf8;
+    cursor:pointer;
+    display:block;
+    margin-top:10px;
+    text-align:center;
+}
+
+#msg{
+    margin-top:10px;
+    font-size:14px;
+    color:#f87171;
+    text-align:center;
+}
+
+.main-title{
+    position:absolute;
+    top:10px;
+    font-size:42px;
+    font-weight:bold;
+    color:#38bdf8;
+    letter-spacing:2px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 class="main-title">Mind2Career AI 2.0</h1>
+
+<div class="card">
+
+    <h2>Login</h2>
+
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p style="margin-top:10px; text-align:center;">
+    Don’t have an account?
+    <a href="register.html" style="color:#38bdf8;">Register here</a>
+    </p>
+
+    <a href="forgot.html">Forgot Password?</a>
+
+    <div id="msg"></div>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>
