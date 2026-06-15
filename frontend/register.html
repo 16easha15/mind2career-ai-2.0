@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Mind2Career AI 2.0 Login</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;   /* ADD */
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    font-family:Arial;
+}
+
+.main-title{
+    position:absolute;
+    top:20px;
+    font-size:42px;
+    font-weight:bold;
+    color:#38bdf8;
+    letter-spacing:2px;
+}
+
+/* CARD FIX */
+.card{
+    width:350px;
+    background:#111827;
+    padding:30px;
+    border-radius:15px;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;   /* ✅ center everything */
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* HEADING CENTER */
+h2{
+    text-align:center;
+    width:100%;
+    margin-bottom:15px;
+}
+
+/* INPUT FIX */
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    border:none;
+    outline:none;
+    box-sizing:border-box;
+}
+
+/* BUTTON CENTER FIX */
+button{
+    width:60%;              /* ✅ not full width */
+    padding:12px;
+    background:#22c55e;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#16a34a;
+}
+
+/* LINK SPACING FIX */
+small{
+    margin-top:15px;   /* ✅ space from button */
+    text-align:center;
+}
+
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 class="main-title">Mind2Career AI 2.0</h1>
+<div class="card">
+
+<h2>Create Account</h2>
+
+<input id="name" placeholder="Full Name">
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<small>
+Already have account? <a href="login.html">Login</a>
+</small>
+
+</div>
+
+<script src="js/register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Chatbot</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+
+}
+
+.chatbox{
+    width:60%;
+    margin:auto;
+    margin-top:30px;
+}
+
+.messages{
+    height:400px;
+    overflow-y:auto;
+    background:#1e293b;
+    padding:15px;
+    border-radius:10px;
+}
+
+.user{
+    text-align:right;
+    margin:10px;
+    color:#38bdf8;
+}
+
+.bot{
+    text-align:left;
+    margin:10px;
+    color:white;
+}
+
+.bot-msg{
+    background:#1e293b;
+    padding:10px;
+    border-radius:10px;
+    color:#e2e8f0;
+    margin:10px;
+}
+
+input{
+    width:80%;
+    padding:10px;
+    margin-top:10px;
+}
+
+button{
+    padding:10px;
+    background:#38bdf8;
+}
+
+.title{
+    text-align:center;
+    margin: 0px;
+    font-size:35px;
+    color:hsl(183, 93%, 60%);
+    font-weight:bold;
+    letter-spacing:1px;
+}
+</style>
+
+</head>
+
+<body>
+<button onclick="goBack()"> Back to Dashboard </button><h1 class="title">Mind2Career Companion</h1>
+
+<script>
+function goBack(){
+    window.location = "dashboard.html";
+}
+</script> 
+<div class="chatbox">
+
+<div id="messages" class="messages"></div>
+
+<div style="display:flex; gap:10px; margin-top:10px;">
+    <input id="msg" placeholder="Ask anything...">
+    <button onclick="send()">Send</button>
+</div>
+
+</div>
+<script src="js/chatbot.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roadmap AI</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+        body {
+            background:#0f172a;
+            color:white;
+            font-family:Arial;
+        }
+
+        .card {
+            width:60%;
+            margin:auto;
+            margin-top:40px;
+            background:#1e293b;
+            padding:20px;
+            border-radius:12px;
+        }
+
+        input, textarea {
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            background:#334155;
+            color:white;
+            border:none;
+        }
+
+        button {
+            background:#38bdf8;
+            padding:10px;
+            border:none;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        #output {
+            margin-top:20px;
+            background:#0b1220;
+            padding:15px;
+            border-radius:10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+<button onclick="goBack()">Back to Dashboard</button>
+
+<script>
+function goBack(){
+    window.location = "dashboard.html";
+}
+</script>
+
+<div class="card">
+
+<h2>🚀 AI Career Roadmap</h2>
+
+<input id="name" placeholder="Name">
+<input id="branch" placeholder="Branch">
+<input id="career_role" placeholder="career_role">
+<textarea id="skills" placeholder="Skills"></textarea>
+
+<button onclick="generate()">Generate</button>
+
+<div id="output"></div>
+
+</div>
+
+<script src="js/roadmap.js"></script>
+
+</body>
+</html>

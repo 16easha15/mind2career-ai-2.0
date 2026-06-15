@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main-content">
+<button onclick="goBack()"> Back to Dashboard </button>
+
+<script>
+function goBack(){
+    window.location = "dashboard.html";
+}
+</script>
+
+
+
+<div class="card">
+
+
+
+<h2>Student Profile</h2>
+
+<input type="text"
+id="fullname"
+placeholder="Full Name">
+
+<input type="text"
+id="college"
+placeholder="College">
+
+<input type="text"
+id="skills"
+placeholder="Skills">
+
+<label>Desired Career Role</label>
+
+<input
+    type="text"
+    id="careerRole"
+    placeholder="Example: Software Engineer"
+/>
+
+<button onclick="saveProfile()">
+Save Profile
+</button>
+
+<button onclick="editProfile()">
+Update Profile
+</button>
+</div>
+
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+</html>

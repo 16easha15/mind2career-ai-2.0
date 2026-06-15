@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind2Career AI 2.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎓 Mind2Career AI 2.0</h1>
+    <p>Your Personal Career & Learning Assistant</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Student Profile</h2>
+
+        <input type="text" id="name" placeholder="Enter Your Name">
+
+        <select id="career">
+            <option value="">Select Career Goal</option>
+            <option>Software Engineer</option>
+            <option>AI Engineer</option>
+            <option>Data Scientist</option>
+            <option>Web Developer</option>
+        </select>
+
+        <button onclick="generateRoadmap()">
+            Generate Roadmap
+        </button>
+    </div>
+
+    <div class="card">
+        <h2>📚 Learning Roadmap</h2>
+        <div id="roadmap">
+            Select a career and generate roadmap.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>💼 Interview Preparation</h2>
+
+        <button onclick="showQuestions()">
+            Generate Interview Questions
+        </button>
+
+        <div id="questions"></div>
+    </div>
+
+    <div class="card">
+        <h2>🤖 Career Assistant</h2>
+
+        <input
+            type="text"
+            id="userInput"
+            placeholder="Ask about career, resume, interview..."
+        >
+
+        <button onclick="chatBot()">Ask</button>
+
+        <div id="chatResponse"></div>
+    </div>
+
+</div>
+
+<footer>
+    <p>SDG 4 - Quality Education | Mind2Career AI</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

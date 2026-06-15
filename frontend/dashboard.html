@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mind2Career AI 2.0 Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            display: flex;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 240px;
+            background: #111827;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            margin: 5px 0;
+            border-radius: 6px;
+        }
+
+        .sidebar a:hover {
+            background: #1e3a8a;
+        }
+
+        .logout-btn {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            background: red;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        /* MAIN */
+        .main {
+            margin-left: 260px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat {
+            flex: 1;
+            background: #0b1220;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat h3 {
+            color: #38bdf8;
+        }
+
+        .big {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .flash-card{
+        background:#0f172a;
+        border-radius:15px;
+        padding:25px;
+        max-width:700px;
+        margin:auto;
+        box-shadow:0 0 20px rgba(0,0,0,0.4);
+        }
+
+        .quiz-header{
+        color:#38bdf8;
+        margin-bottom:15px;
+        font-weight:bold;
+}
+
+    .option-btn{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    text-align:left;
+}
+
+    .option-btn:hover{
+    background:#334155;
+}
+
+    .selected{
+    background:#2563eb !important;
+}
+
+    .next-btn{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+}
+    </style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>Mind2Career AI 2.0</h2>
+
+    
+    <a href="profile.html">Profile</a>
+
+    <a href="roadmap.html">Roadmap Generator AI</a>
+
+    <a href="chatbot.html">Mind2Career Companion</a>
+
+    <a href="prepare.html">Prepare Yourself</a>
+
+    <button class="logout-btn" onclick="logout()">
+        Logout
+    </button>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="card">
+        <h1 id="welcome">Welcome</h1>
+
+        <p id="userRole"></p>
+
+        <p id="userSkills"></p>
+        <p>Your AI career dashboard</p>
+    </div>
+
+    <div class="card">
+
+    <h2>Quiz History</h2>
+
+    <div id="quizHistory">
+        Loading...
+    </div>
+
+</div>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
